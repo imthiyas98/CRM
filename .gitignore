@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Django-specific files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Database
+*.sqlite3
+
+# Media and static files
+/media/
+/static/
+/staticfiles/
+
+# Local development settings
+.env
+*.local
+config/settings/local.py
+
+# IDE files
+.idea/
+.vscode/
+
+# Migrations (optional, keep if you don't want to track migrations)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Node modules (if using frontend frameworks)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Pipenv
+Pipfile.lock
+
+# Celery
+celerybeat-schedule
+
+# MacOS & Linux system files
+.DS_Store
+*.swp
+.swo
+.swp
+
+# Pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Docker
+*.pid
+docker-compose.override.yml
