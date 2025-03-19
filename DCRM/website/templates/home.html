@@ -3,8 +3,41 @@
 {% block content %}
 <div class="container mt-5">
     {% if user.is_authenticated %}
-        <h2 class="text-center">Welcome, {{ user.username }}!</h2>
-      
+    <h2 class="text-center">Welcome, {{ user.username }}!</h2>
+    <p class="text-center">Here are the user records:</p>
+
+    {% if records %}
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Zipcode</th>
+                    <th>Created At</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.first_name }} {{ record.last_name }}</td>
+                    <td>{{ record.email }}</td>
+                    <td>{{ record.phone }}</td>
+                    <td>{{ record.address }}</td>
+                    <td>{{ record.city }}</td>
+                    <td>{{ record.zipcode }}</td>
+                    <td>{{ record.created_at }}</td>
+                    <td>{{ record.id }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="text-center text-muted">No records found.</p>
+    {% endif %}
 
     {% else %}
     <div class="d-flex justify-content-center">
